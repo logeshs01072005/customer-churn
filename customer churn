@@ -1,0 +1,26 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import xgboost as XGBClassifier
+from pandas import DataFrame
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import confusion_matrix
+
+data = pd.read_csv("customer_churn.csv")
+data.sample(5)
+print('---------------Fetch all data--------------------')
+print(data)
+print('---------------Fetch TotalCharges--------------------')
+print(data.TotalCharges.values)
+print('---------------Fetch data--------------------')
+print(data[data.Churn=='Yes'])
+print('---------------Get DataType--------------------')
+print(data.dtypes)
+
